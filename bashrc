@@ -7,6 +7,11 @@ export PATH="$PATH:$OOZIE_HOME/bin"
 nameNode=hdfs://localhost:8020
 jobTracker=localhost:8021
 
+# history
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
+export HISTTIMEFORMAT="%F %T "
+
 # hadoop things
 export HADOOP_HOME="$HOME/tools/hadoop-0.20.2-cdh3u3"
 PATH="$PATH:$HADOOP_HOME/bin"
