@@ -23,8 +23,6 @@ layout 1monitor 'Terminal':REPEAT ${lefthalf}
 layout 1monitor 'Sublime Text 2':REPEAT ${righthalf}
 layout 1monitor 'Firefox':REPEAT ${righthalf}
 layout 1monitor 'Chrome':REPEAT ${righthalf}
-layout 1monitor 'TextEdit':REPEAT ${topleft}
-layout 1monitor 'iChat':REPEAT ${bottomleft}
 layout 1monitor 'Propane':REPEAT ${topleft}
 layout 1monitor 'Skype':REPEAT ${topright}
 
@@ -51,7 +49,7 @@ bind o:cmd focus down
 bind 4:ctrl focus 'Terminal'
 bind 5:ctrl focus 'Firefox'
 bind 3:ctrl focus 'TextEdit'
-bind 2:ctrl focus 'Chrome'
+bind 6:ctrl focus 'Chrome'
 
 bind 7:ctrl focus 'iChat'
 bind 8:ctrl focus 'Propane'
