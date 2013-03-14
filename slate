@@ -34,7 +34,7 @@ bind l:cmd layout 1monitor
 
 # Positioning
 bind f:ctrl ${full}
-bind w:ctrl ${lefthalf}
+bind s:ctrl ${lefthalf}
 bind e:ctrl ${righthalf}
 bind k:ctrl ${bottomleft}
 bind ;:ctrl ${bottomright}
