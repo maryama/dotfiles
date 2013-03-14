@@ -50,9 +50,13 @@ bind i:cmd focus up
 bind o:cmd focus down
 
 # Focus, apps
-bind 5:ctrl focus 'Terminal'
-bind 4:ctrl focus 'Firefox'
-bind 3:ctrl focus 'Propane'
+bind 4:ctrl focus 'Terminal'
+bind 5:ctrl focus 'Firefox'
+bind 3:ctrl focus 'TextEdit'
+
+bind 7:ctrl focus 'iChat'
+bind 8:ctrl focus 'Propane'
+bind 9:ctrl focus 'Skype'
 
 bind 1:ctrl undo # TODO: revisit this
 
