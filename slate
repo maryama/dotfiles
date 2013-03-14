@@ -49,9 +49,9 @@ bind o:cmd focus down
 bind 4:ctrl focus 'Terminal'
 bind 5:ctrl focus 'Firefox'
 bind 3:ctrl focus 'TextEdit'
-bind 6:ctrl focus 'Chrome'
+bind 2:ctrl focus 'Google Chrome'
 
-bind 7:ctrl focus 'iChat'
+bind 0:ctrl focus 'iChat'
 bind 8:ctrl focus 'Propane'
 bind 9:ctrl focus 'Skype'
 
