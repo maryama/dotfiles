@@ -3,7 +3,8 @@ export PATH=/Users/maryam/bin:$PATH
 # oozie things
 export OOZIE_URL=http://localhost:11000/oozie
 export OOZIE_HOME="/Users/maryam/tools/oozie-2.3.2-cdh3u3"
-export PATH="$PATH:$OOZIE_HOME/bin"
+export PATH="$PATH:$OOZIE_HOME/bin:$HOME/tools/astyle/build/mac/bin"
+
 nameNode=hdfs://localhost:8020
 jobTracker=localhost:8021
 
@@ -38,8 +39,11 @@ alias gc='git checkout'
 # drag
 alias drag='./fs drag --api-server=localhost:12345 --lift-server=localhost:12345 --api-host=localhost:12345'
 
-#./pq
+#./fs
 alias qc='./fs compile'
 alias qt='./fs test'
+
+# pants autocompletion
+source /Users/maryam/foursquare.web/scripts/autocomplete-pants.sh
 
 export EDITOR=vim
