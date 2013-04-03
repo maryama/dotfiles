@@ -1,37 +1,9 @@
+[user]
+	email = maryam@foursquare.com
+	name = Maryam
 [branch "master"]
 	rebase = true
 [branch]
 	autosetuprebase = always
-[user]
-	name = Maryam
-	email = maryam@foursquare.com
 [core]
 	ignorecase = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[diff]
-	tool = Kaleidoscope
-
-[pager]
-  color = true
-[color]
-  ui = true
-  interactive = true
-[color "status"]
-  added = green bold
-  changed = red bold
-  untracked = cyan
-
-[color "diff"]
-  meta = cyan bold
-  old = red bold
-  new = green bold
-  frag = blue
-  commit = yellow bold
-
-[color "branch"]
-  current = green bold
-  local = bold
-  remote = red bold

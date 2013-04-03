@@ -1,6 +1,3 @@
-" Pathogen
-execute pathogen#infect()
-
 " Spacing
 set vb t_vb=
 set backspace=indent,eol,start
@@ -58,11 +55,10 @@ set smartcase
 set textwidth=80
 
 colorscheme zellner
-set background=dark
+"set background=dark
 
 " set ctag home for keyword completion
 set tags=./tags;/
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remappings
@@ -87,16 +83,6 @@ nnoremap k gk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Turn autocompletion plugin on 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:neocomplcache_enable_at_startup = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Gundo Remap
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-T> :GundoToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For CTRL-P
