@@ -13,3 +13,8 @@ alias qt='./fs test'
 
 # run python linter and put output in useful spot
 alias plint='./scripts/luigi/run-pylint.sh; cp .pants.d/luigi/pylint.html ~/www/'
+
+# pants autocompletion
+source /Users/maryam/foursquare.web/scripts/autocomplete-pants.sh
+
+export EDITOR=vim

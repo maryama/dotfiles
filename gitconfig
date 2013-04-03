@@ -7,3 +7,27 @@
 	autosetuprebase = always
 [core]
 	ignorecase = false
+
+[pager]
+  color = true
+[color]
+  ui = true
+  interactive = true
+[color "status"]
+  added = green bold
+  changed = red bold
+  untracked = cyan
+
+[color "diff"]
+  meta = cyan bold
+  old = red bold
+  new = green bold
+  frag = blue
+  commit = yellow bold
+
+[color "branch"]
+  current = green bold
+  local = bold
+  remote = red bold
+[push]
+	default = upstream
