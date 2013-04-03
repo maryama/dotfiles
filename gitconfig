@@ -1,18 +1,12 @@
+[user]
+	email = maryam@foursquare.com
+	name = Maryam
 [branch "master"]
 	rebase = true
 [branch]
 	autosetuprebase = always
-[user]
-	name = Maryam
-	email = maryam@foursquare.com
 [core]
 	ignorecase = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[diff]
-	tool = Kaleidoscope
 
 [pager]
   color = true
