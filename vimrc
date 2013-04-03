@@ -104,3 +104,9 @@ nnoremap <C-T> :GundoToggle<CR>
 let g:ctrlp_regexp = 1
 let g:ctrlp_max_depth = 40
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Whitespace highlighting
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$\| \+\ze\t/
