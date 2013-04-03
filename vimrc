@@ -1,6 +1,3 @@
-" Pathogen
-execute pathogen#infect()
-
 " Spacing
 set vb t_vb=
 set backspace=indent,eol,start
@@ -38,7 +35,7 @@ au BufEnter *.c0 setf c
 au BufEnter *.c0 set cindent
 
 " scala configs
-au BufRead,BufNewFile *.scala set filetype=scala 
+au BufRead,BufNewFile *.scala set filetype=scala
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -49,20 +46,16 @@ set history=700
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
-
 set ignorecase "Ignore case when searching
 set smartcase
 
 set textwidth=80
 
 colorscheme zellner
-set background=dark
+"set background=dark
 
 " set ctag home for keyword completion
 set tags=./tags;/
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remappings
@@ -87,16 +80,6 @@ nnoremap k gk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Turn autocompletion plugin on 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:neocomplcache_enable_at_startup = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Gundo Remap
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-T> :GundoToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For CTRL-P
