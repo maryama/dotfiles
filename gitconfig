@@ -7,7 +7,6 @@
 	autosetuprebase = always
 [core]
 	ignorecase = false
-<<<<<<< HEAD
 
 [pager]
   color = true
@@ -32,5 +31,3 @@
   remote = red bold
 [push]
 	default = upstream
-=======
->>>>>>> 7c7c65230540ff32bf58f00fbca8301843e11f4c
