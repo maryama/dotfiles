@@ -1,3 +1,5 @@
+" Pathogen
+execute pathogen#infect()
 " Spacing
 set vb t_vb=
 set backspace=indent,eol,start
