@@ -7,8 +7,8 @@ alias pull='git safepull origin master'
 alias fpush='git fpush origin master'
 alias gc='git checkout'
 
-# ./fs
-alias qc='./fs compile'
+#./fs
+alias qc='./fs compile --read-from-artifact-cache'
 alias qt='./fs test'
 
 # run python linter and put output in useful spot
