@@ -40,7 +40,8 @@ alias gc='git checkout'
 alias drag='./fs drag --api-server=localhost:12345 --lift-server=localhost:12345 --api-host=localhost:12345'
 
 #./fs
-alias qc='./fs compile --read-from-artifact-cache'
+alias qc='./fs qc --read-from-artifact-cache'
+alias sc='./fs sc'
 alias qt='./fs test'
 
 # pants autocompletion
