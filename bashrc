@@ -15,6 +15,9 @@ alias gc='git checkout'
 alias qc='./fs compile --read-from-artifact-cache'
 alias qt='./fs test'
 
+# compile luigi
+alias ql='./pants --beta binary src/python/fsluigi:luigi-main'
+
 # run python linter and put output in useful spot
 alias plint='./scripts/luigi/run-pylint.sh; cp .pants.d/luigi/pylint.html ~/www/'
 
@@ -23,7 +26,7 @@ alias plint='./scripts/luigi/run-pylint.sh; cp .pants.d/luigi/pylint.html ~/www/
 #################################
 #this one is for testing local server changes
 alias web='./fs web --www=cached --api=cached --drag=cached --rec=pants --prod --me -j -D -l'
-#this oen is for testing admin page changes
+#this one is for testing admin page changes
 alias aweb='./fs web --www=pants --api=staging --drag=cached --me'
 
 export EDITOR=vim
