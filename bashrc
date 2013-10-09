@@ -13,6 +13,7 @@ alias gc='git checkout'
 #./fs
 #################################
 alias qc='./fs compile --read-from-artifact-cache'
+alias sc='./fs sc'
 alias qt='./fs test'
 
 # compile luigi
