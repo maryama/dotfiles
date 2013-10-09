@@ -27,6 +27,7 @@ alias plint='./scripts/luigi/run-pylint.sh; cp .pants.d/luigi/pylint.html ~/www/
 #################################
 #this one is for testing local server changes
 alias web='./fs web --www=cached --api=cached --drag=cached --rec=pants --prod --me -j -D -l'
+
 #this one is for testing admin page changes
 alias aweb='./fs web --www=pants --api=staging --drag=cached --me'
 
