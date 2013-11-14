@@ -17,6 +17,12 @@ export HISTTIMEFORMAT="%F %T "
 export HADOOP_HOME="$HOME/tools/hadoop-0.20.2-cdh3u3"
 PATH="$PATH:$HADOOP_HOME/bin"
 
+# because java is dumb
+export TZ=UTC
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
 PS1='\n\w$ '
 
 alias ls='ls -G'
@@ -31,10 +37,11 @@ alias gis='git status'
 alias gic='git commit -a'
 alias gica='git commit -a --amend'
 alias gips='git push --force staging `git branch | grep "*" | sed "s/* //"`'
-alias pull='git safepull origin master'
+alias pull='git fpull origin master'
 alias fpush='git fpush origin master'
 alias fs='find . | grep -i $1 | grep scala | grep -v target | grep -v swp | grep -v class'
 alias gc='git checkout'
+alias gg='git grep'
 
 # drag
 alias drag='./fs drag --api-server=localhost:12345 --lift-server=localhost:12345 --api-host=localhost:12345'
