@@ -5,8 +5,7 @@ export OOZIE_URL=http://localhost:11000/oozie
 export OOZIE_HOME="/Users/maryam/tools/oozie-2.3.2-cdh3u3"
 export PATH="$PATH:$OOZIE_HOME/bin:$HOME/tools/astyle/build/mac/bin"
 
-nameNode=hdfs://localhost:8020
-jobTracker=localhost:8021
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7.0)
 
 # history
 export HISTFILESIZE=1000000000
@@ -42,6 +41,7 @@ alias fpush='git fpush origin master'
 alias fs='find . | grep -i $1 | grep scala | grep -v target | grep -v swp | grep -v class'
 alias gc='git checkout'
 alias gg='git grep'
+alias gld='git diff HEAD^ HEAD'
 
 # drag
 alias drag='./fs drag --api-server=localhost:12345 --lift-server=localhost:12345 --api-host=localhost:12345'
