@@ -38,7 +38,7 @@ au BufEnter *.c0 setf c
 au BufEnter *.c0 set cindent
 
 " scala configs
-au BufRead,BufNewFile *.scala set filetype=scala 
+au BufRead,BufNewFile *.scala set filetype=scala
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -50,7 +50,7 @@ set history=700
 set autoread
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
+autocmd! bufwritepost vimrc source ~/dotfiles/vimrc
 
 set ignorecase "Ignore case when searching
 set smartcase
@@ -89,7 +89,7 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Turn autocompletion plugin on 
+" => Turn autocompletion plugin on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
 
@@ -110,3 +110,8 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Navigate pex files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufReadCmd *.pex call zip#Browse(expand("<amatch>"))
