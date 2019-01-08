@@ -36,8 +36,8 @@ bind l:cmd layout 1monitor
 bind f:ctrl ${full}
 bind s:ctrl ${lefthalf}
 bind e:ctrl ${righthalf}
-bind k:ctrl ${bottomleft}
-bind ;:ctrl ${bottomright}
+bind x:ctrl ${bottomleft}
+bind q:ctrl ${bottomright}
 
 # Focus, relative
 bind j:cmd focus left
@@ -46,10 +46,10 @@ bind i:cmd focus up
 bind o:cmd focus down
 
 # Focus, apps
-bind 4:ctrl focus 'Terminal'
-bind 5:ctrl focus 'Firefox'
-bind 3:ctrl focus 'TextEdit'
 bind 2:ctrl focus 'Google Chrome'
+bind 3:ctrl focus 'Slack'
+bind 4:ctrl focus 'iTerm2'
+bind 5:ctrl focus 'Notes'
 
 bind 0:ctrl focus 'iChat'
 bind 8:ctrl focus 'Slack'
@@ -73,4 +73,5 @@ bind up:cmd;alt focus behind
 bind down:cmd;alt focus behind
 
 # Window Hints
-bind e:ctrl hint asdfjkl;
+# I don't really use this
+#bind h:ctrl hint asdfjkl;
