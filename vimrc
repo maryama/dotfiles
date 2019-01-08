@@ -1,3 +1,23 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" plugins on GitHub repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jasoncodes/ctrlp-modified.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 " Pathogen
 execute pathogen#infect()
 
@@ -21,6 +41,10 @@ set hls
 " Smart indent
 set si
 
+" Have split windows open more naturally
+set splitbelow
+set splitright
+
 syntax on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,6 +52,7 @@ syntax on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable filetype for command below
 filetype on
+" generally want this, but also required for Vundle
 filetype plugin indent on
 
 " Use c indentation style and syntax highlighting for c, c++, and c0 files
@@ -67,20 +92,26 @@ set tags=./tags;/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Move between split windows
-map <A-J> <C-W>j<C-W>_
-map <A-K> <C-W>k<C-W>_
-
-" So I can use J to move between tabs
+" So I can use J to move between windows
 nnoremap <C-J> J
 
-" Move between tabs
-nnoremap J gT
-nnoremap K gt
+" Move between split windows
+nnoremap J <C-W><C-J>
+nnoremap K <C-W><C-K>
+nnoremap H <C-W><C-H>
+nnoremap L <C-W><C-L>
 
 " Wrapped line movement
 nnoremap j gj
 nnoremap k gk
+
+" Make a shortcut for the file explorer
+nnoremap - :E<CR>
+
+" Shortcuts for CtrlP Modified
+nnoremap <C-m> :CtrlPModified<CR>
+nnoremap <C-b> :CtrlPBranchModified<CR>
+nnoremap <C-B> :CtrlPBranch<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CTag extensions
@@ -96,7 +127,8 @@ let g:neocomplcache_enable_at_startup = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Gundo Remap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-T> :GundoToggle<CR>
+" I'm disabling this since I don't really use it
+" nnoremap <C-T> :GundoToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => For CTRL-P
