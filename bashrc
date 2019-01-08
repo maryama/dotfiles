@@ -36,8 +36,9 @@ alias gis='git status'
 alias gic='git commit -a'
 alias gica='git commit -a --amend'
 alias gips='git push --force staging `git branch | grep "*" | sed "s/* //"`'
-alias pull='git fpull origin master'
-alias fpush='git fpush origin master'
+alias pull='./fs pull'
+# i think one should be something different but not sure what yet
+#alias fpush='git fpush origin master'
 alias fs='find . | grep -i $1 | grep scala | grep -v target | grep -v swp | grep -v class'
 alias gc='git checkout'
 alias gg='git grep'
@@ -55,3 +56,9 @@ alias qt='./fs test'
 source /Users/maryam/foursquare.web/scripts/autocomplete-pants.sh
 
 export EDITOR=vim
+
+# Adds current git branch to the command prompt
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
